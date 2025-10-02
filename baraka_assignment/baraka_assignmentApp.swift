@@ -9,9 +9,18 @@ import SwiftUI
 
 @main
 struct baraka_assignmentApp: App {
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootUIKitView()
         }
     }
+}
+struct RootUIKitView: UIViewControllerRepresentable {
+    func makeUIViewController(context: Context) -> some UIViewController {
+        let rootViewController = PortfolioViewController()
+        return UINavigationController(rootViewController: rootViewController)
+    }
+
+    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {}
 }
